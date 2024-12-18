@@ -1,5 +1,13 @@
 pipeline {
-    agent any  // Use any available agent
+    agent { label 'MyAgent' }  // Replace 'MyAgent' with the label you assigned
+    stages {
+        stage('Build') {
+            steps {
+                echo 'Building...'
+            }
+        }
+    }
+}
 
     environment {
         // Define any environment variables here
